@@ -1,4 +1,6 @@
 COGS 121 Assignment 2 - Spring 2015
 ===========
 
-Instructions are in the wiki.
+Assignment 2
+David Lee
+Cogs 121 SP15

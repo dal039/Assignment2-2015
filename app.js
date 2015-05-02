@@ -185,6 +185,7 @@ app.get('/igMediaCounts', ensureAuthenticatedInstagram, function(req, res){
         user_id: user.ig_id,
         access_token: user.ig_access_token,
         complete: function(data) {
+          console.log(data);
           // an array of asynchronous functions
           var asyncTasks = [];
           var mediaCounts = [];
@@ -216,6 +217,8 @@ app.get('/igMediaCounts', ensureAuthenticatedInstagram, function(req, res){
   });
 });
 
+
+
 app.get('/visualization', ensureAuthenticatedInstagram, function (req, res){
   res.render('visualization');
 }); 
@@ -224,6 +227,12 @@ app.get('/visualization', ensureAuthenticatedInstagram, function (req, res){
 app.get('/c3visualization', ensureAuthenticatedInstagram, function (req, res){
   res.render('c3visualization');
 }); 
+
+
+app.get('/myc3visualization', ensureAuthenticatedInstagram, function (req, res){
+  res.render('myc3visualization');
+});
+
 
 app.get('/auth/instagram',
   passport.authenticate('instagram'),
